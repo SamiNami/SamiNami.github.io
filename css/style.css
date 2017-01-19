@@ -1,55 +1,60 @@
+
+
+html,body {
+  width: 100%;
+  height: 100%;
+
+}
+
+
+.wrap {
+    width: 100%;
+    background-color: #191919;
+}
+.wrap2 {
+  background-color: #191915;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+
+.container{
+padding: 0;
+/*
+background: url(../images/wild.png) repeat;
+*/
+}
+
+.jumbotron{
+  margin-bottom: 0;
+}
+
+/* Makes the container take up the entire screen */
+.fill{
+  min-height: 100%;
+  height: 100%;
+}
+
+
+.btn{
+  margin-left:  5px;
+}
+
+#contact{
+  background-color: #191919;
+
+}
+
+#body {
+  /* BG pattern from https://subtlepatterns.com/ */
+  background:url(../images/bg.png) repeat;
+}
+
 #navcont {
     padding-top:10px;
-    paddin-bottom:10px;
-    background-color: #173e43;
-    height:100%;
-}
-
-#one {
-    padding-top:50px;
-    paddin-bottom:50px;
-    background-color: #dddfd4;
-    height:100%;
-}
-#two {
-    padding-top:10px;
-    paddin-bottom:10px;
-    background-color: #fae596;
-}
-
-#three {
-    padding-top:10px;
-    paddin-bottom:10px;
-    background-color: #3fb0ac;
-}
-
-#four {
-    padding-top:50px;
-    paddin-bottom:50px;
-    background-color: #173e43;
-    height:100%;
-}
-
-.thick-gray-border {
-    border-color: #dddfd4;
-    border-width: 10px;
-    border-style: solid;
-    border-radius: 50%;
-}
-.my-image {
-    width: 100%;
-}
-.link-image {
-    width: 10%;
-}
-
-.face-image {
-    width: 10%;
-}
-
-.row{
-  margin-top: 40px;
-  margin-bottom: 40px
-  
-}
-
+    padding-bottom:10px;
+    background-color: #191919;
+    text-align: center;
+    }

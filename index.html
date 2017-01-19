@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html >
 <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Portfolio - Sami Perälahti</title>
 
-  
+
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 
       <link rel="stylesheet" href="css/style.css">
@@ -12,115 +14,81 @@
 
 </head>
 
-<body>
-  <nav class="navbar navbar-fixed-top">
- <div class="container-fluid" id="navcont">
-  <a class="navbar-brand" href="#"></a>
-  <ul class="nav navbar-nav">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#porlink">Portfolio</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#conlink">Contact</a>
-    </li>
-  </ul>
+<body id="body">
+<!-- Navbar -->
+<nav class="wrap navbar navbar-fixed-top">
+ <div class="container" id="navcont">
+
+   <div class="row">
+     <!-- Nav buttons -->
+     <div class="col-lg-12">
+       <button type="button" class="btn btn-default btn-lg pull-left">
+       <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Home </button>
+
+
+       <button type="button" class="btn btn-default btn-lg pull-left">
+       <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Portfolio </button>
+
+
+       <button type="button" class="btn btn-default btn-lg pull-left">
+       <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact </button>
+       </button>
+     </div>
+
+
+    </div>
+   </div>
+  </div>
  </div>
 </nav>
 
-
-
-<section id="one">
-    <div class="container">
-        <div class="row text-center">
-          <div class="col-md-8">
-            <h1 id="infotext">Front-End Developer and UX/UI designer, with practical experience in project management, branding strategy, and creative direction; devoted to functional programming and information architecture.</hi>
-          </div>
-          <div class="col-md-4">
-            <img class="my-image thick-gray-border" src="https://avatars2.githubusercontent.com/u/24779129?v=3&s=460" alt="Me">
-          </div>
-        </div>
+  <!-- Main content -->
+  <div class="container fill">
+    <!-- About me content -->
+    <div class="jumbotron fill">
+      <h1>About Me</h1>
+      <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
+      responsive, mobile-first projects on the web.</p>
     </div>
-</section>
-<a class="anchor" name="porlink"></a>
-<section id="two">
-    <div class="container-fluid">
-       <div class="row text-center">
-         <div class="col-md-12">
-            <h1> Portfolio </h1>
-          </div>
-        </div>
-        <div class="row text-center">
-          <div class="col-md-6">
-            <img class="placeholder-image" src="https://dummyimage.com/mediumrectangle/222222/eeeeee" alt="placeholder">
-          </div>
-          <div class="col-md-6">
-            <img class="placeholder-image" src="https://dummyimage.com/mediumrectangle/222222/eeeeee" alt="placeholder">
-          </div>
-        </div>
-        <div class="row text-center">
-          <div class="col-md-6">
-            <img class="placeholder-image" src="https://dummyimage.com/mediumrectangle/222222/eeeeee" alt="placeholder">
-          </div>
-          <div class="col-md-6">
-            <img class="placeholder-image" src="https://dummyimage.com/mediumrectangle/222222/eeeeee" alt="placeholder">
-          </div>
-        </div>
+    <!-- Anchors so the navbar can "jump" -->
+    <a class ="anchor" id="porlink"></a>
 
-    </div>
-</section>
-<a class="anchor" name="conlink"></a>
-<section id="three">
-    <div class="container-fluid">
-        <div class="row text-center">
-          <div class="col-md-12">
-            <h1> Contact me </h1>
-          </div>
-        </div>
-        <div class="row text-center">
-          <div class="col-md-6">
-            <form>
-                     <div class="form-group">
-    <label for="exampleInputEmail1">Name</label>
-    <input type="Name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter Name">
-             </div>
-              <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-             </div>
 
-             <div class="form-group">
-    <label for="exampleTextarea">Message</label>
-    <textarea class="form-control" id="exampleTextarea" rows="7"></textarea>
+
+
   </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-          </div>
-          <div class="col-md-6">
-            <p>Want to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, tips on how to solve your sudoku, random questions about the universe and the meaning of life, or even if only for some nice Fika here in stunning Toronto... just feel free to drop me a line anytime.
-I promise to reply A.S.A.P.
-Note: No spam/soliciting pour moi, merci :)</p>
-          </div>
-        </div>
+
+<div class="container fill">
+  <!-- Portfolio content -->
+  <div class="jumbotron fill">
+    <h1>Portfolio</h1>
+    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
+    responsive, mobile-first projects on the web.</p>
+  </div>
+</div>
 
 
-    </div>
-</section>
 
-<section id="four">
+
+
+  <div class="wrap jumbotron">
     <div class="container">
-        <div class="row text-center">
-          <div class="col-md-12">
-            <a href="https://www.linkedin.com/in/sami-per%C3%A4lahti-b8b819135?trk=hp-identity-name" target='_blank'>
-            <img class="link-image" src="https://cdn0.iconfinder.com/data/icons/yooicons_set01_socialbookmarks/512/social_linkedin_box_blue.png" alt="link"></a>
-           <a href="https://www.facebook.com" target='_blank'> <img class="face-image" src="https://cdn0.iconfinder.com/data/icons/yooicons_set01_socialbookmarks/512/social_facebook_box_blue.png" alt="fb">
-                     </div></a>
-        </div>
+      <h1>Contact</h1>
+      <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
+      responsive, mobile-first projects on the web.</p>
     </div>
-</section>
+  </div>
+
 
 
 </body>
+
+
+
+
+
+
+
+
+
 </html>
