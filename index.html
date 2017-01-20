@@ -1,9 +1,9 @@
 <!DOCTYPE html>
+<html >
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Portfolio - Sami Perälahti</title>
 
 
@@ -11,84 +11,129 @@
 
       <link rel="stylesheet" href="css/style.css">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 </head>
 
-<body id="body">
-<!-- Navbar -->
-<nav class="wrap navbar navbar-fixed-top">
+<body id ="body">
+  <nav class="navbar navbar-fixed-top wrap">
  <div class="container" id="navcont">
-
-   <div class="row">
-     <!-- Nav buttons -->
-     <div class="col-lg-12">
-       <button type="button" class="btn btn-default btn-lg pull-left">
-       <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Home </button>
-
-
-       <button type="button" class="btn btn-default btn-lg pull-left">
-       <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Portfolio </button>
-
-
-       <button type="button" class="btn btn-default btn-lg pull-left">
-       <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact </button>
-       </button>
-     </div>
-
-
-    </div>
-   </div>
-  </div>
+  <a class="navbar-brand" href="#"></a>
+  <ul class="nav navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#porlink">Portfolio</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#conlink">Contact</a>
+    </li>
+  </ul>
  </div>
 </nav>
 
-  <!-- Main content -->
-  <div class="container fill">
-    <!-- About me content -->
-    <div class="jumbotron fill">
-      <h1>About Me</h1>
-      <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-      responsive, mobile-first projects on the web.</p>
+
+
+
+    <div class="container" >
+      <div class ="jumbotron lighpattern" >
+        <div class="row text-center ">
+          <div class="col-md-8 margin-top">
+            <h2 id="infotext">Software Engineer, with practical experience in Front-End Development. </h2>
+          </div>
+          <div class="col-md-4 margin-top">
+            <img class="my-image thick-gray-border" src="https://avatars2.githubusercontent.com/u/24779129?v=3&s=460" alt="Me">
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Anchors so the navbar can "jump" -->
-    <a class ="anchor" id="porlink"></a>
+
+<a class="anchor" id="porlink"></a>
+
+    <div class="container">
+      <div class ="jumbotron lighpattern">
+       <div class="row text-center">
+         <div class="col-md-12">
+            <h1> Portfolio </h1>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-6">
+            <img class="placeholder-image" src="https://dummyimage.com/mediumrectangle/222222/eeeeee" alt="placeholder">
+          </div>
+          <div class="col-md-6">
+            <img class="placeholder-image" src="https://dummyimage.com/mediumrectangle/222222/eeeeee" alt="placeholder">
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-6">
+            <img class="placeholder-image" src="https://dummyimage.com/mediumrectangle/222222/eeeeee" alt="placeholder">
+          </div>
+          <div class="col-md-6">
+            <img class="placeholder-image" src="https://dummyimage.com/mediumrectangle/222222/eeeeee" alt="placeholder">
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<a class="anchor" id="conlink"></a>
+
+    <div class="container">
+      <div class ="jumbotron lighpattern">
+            <div class="row text-center">
+              <div class="col-md-12">
+                <h1> Contact me </h1>
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-md-6">
+                <form>
+                         <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input type="Name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter Name">
+                 </div>
+                  <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                 </div>
+
+                 <div class="form-group">
+        <label for="exampleTextarea">Message</label>
+        <textarea class="form-control" id="exampleTextarea" rows="7"></textarea>
+      </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <p>Want to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, tips on how to solve your sudoku, random questions about the universe and the meaning of life, or even if only for some nice Fika here in stunning Toronto... just feel free to drop me a line anytime.
+I promise to reply A.S.A.P.
+Note: No spam/soliciting pour moi, merci :)</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
 
+<div class="jumbotron greypattern">
+    <div class="container">
+      <div class="row text-center">
 
+          <div class="col-md-6">
+            <a href="https://www.linkedin.com/in/sami-per%C3%A4lahti-b8b819135?trk=hp-identity-name" target='_blank'>
+            <img class="link-image" src="https://cdn0.iconfinder.com/data/icons/yooicons_set01_socialbookmarks/512/social_linkedin_box_blue.png" alt="link"></a>
+           <a href="https://www.facebook.com" target='_blank'> <img class="face-image" src="https://cdn0.iconfinder.com/data/icons/yooicons_set01_socialbookmarks/512/social_facebook_box_blue.png" alt="fb">
+                     </div></a>
 
-  </div>
-
-<div class="container fill">
-  <!-- Portfolio content -->
-  <div class="jumbotron fill">
-    <h1>Portfolio</h1>
-    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-    responsive, mobile-first projects on the web.</p>
-  </div>
+          <div class="col-md-6">
+              <p>Sami Perälahti  <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>  2017. All Rights Reversed.</p>
+          </div>
+        </div>
+    </div>
 </div>
 
 
-
-
-
-  <div class="wrap jumbotron">
-    <div class="container">
-      <h1>Contact</h1>
-      <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-      responsive, mobile-first projects on the web.</p>
-    </div>
-  </div>
-
-
-
 </body>
-
-
-
-
-
-
-
-
-
 </html>
