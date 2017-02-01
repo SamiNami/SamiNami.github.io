@@ -100,3 +100,20 @@ html body {
   width: 32%;
   padding-bottom: 10px;
 }
+
+
+.placeholder-image{
+  border-color: #FF3B3F;
+  border: 1px;
+  border-style: solid;
+}
+.placeholder-image:hover{
+  color: #FF3B3F;
+  opacity: 1;
+
+}
+
+a:link, a:hover, a:visited, a:active{
+  color: none;
+  text-decoration: none;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- import jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- import bootstrap -->
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+  <link rel="stylesheet" href="css/tStyle.css">
+</head>
+
+<script>
+
+$(document).ready(function(){
+  // array for the streams I want to GET
+  var streams = ["ESL_SC2", "freecodecamp", "summit1g", "brunofin"];
+  // arrays to store the data in
+  var check =[];
+  var checkOnline = [];
+
+  streams.forEach(function(stream){
+
+    $.getJSON("https://wind-bow.gomix.me/twitch-api/channels/"+ stream +"",function(json){
+      // if the status is 404, html becomes deleted
+      if(json.status === 404){
+        // add exist false
+        check.push({ name: stream, exists: false });
+      }
+      else{
+        // add exist true, gets the image, get url
+        check.push({ name: stream, exists: true, image: json.logo, url: json.url });
+
+      }
+      // checks if all JSON requests have arrived (once the check is same lenght as streams)
+      if (check.length === streams.length){
+
+        streams.forEach(function(stream){
+          $.getJSON("https://wind-bow.gomix.me/twitch-api/streams/"+ stream +"",function(json){
+          if (json.stream === null ){
+            checkOnline.push({ name: stream, status: "offline" });
+          }
+          else{
+            checkOnline.push({ name: stream, status: "online", extra: json.stream.channel.status });
+          }
+          if (checkOnline.length === streams.length){
+
+            console.log(check[0].name);
+            // sort both arrays so they are in the same order
+            check.sort(compare);
+            checkOnline.sort(compare);
+
+            // add the data to the CSS
+            for (i = 0; i < check.length; i++){
+              if (check[i].exists === false){
+                // note added imageCSS class
+                var placeholderImage = "<img src='http://sweettutos.com/wp-content/uploads/2015/12/placeholder.png' alt='placeholder' class = 'imageCSS'>";
+                $( "#targetImage" ).append( "<div class ='logo deleted'> "+placeholderImage+" </div>" );
+                $( "#targetInfo" ).append( "<div class ='info deleted'> "+ check[i].name +"'s account has been deleted  </div>" );
+              }
+              else if (check[i].exists === true){
+
+                // check online status, and add data accordingly
+                if(checkOnline[i].status === "offline" ){
+
+                  $( "#targetInfo" ).append( "<a href='" + check[i].url + "'> <div class ='info offline'> "+ check[i].name + " is offline </div> </a>" );
+
+                  var image = "<img src='"+ check[i].image +"' alt='logo' class ='imageCSS' ";
+                  $( "#targetImage" ).append( "<div class ='logo offline'> " + image + " </div>" );
+
+
+                }
+                else if(checkOnline[i].status === "online" ){
+                  var url = "<a href='" +check[i].url + "'> </a>";
+                  $( "#targetInfo" ).append( "<a href='" + check[i].url + "'> <div class ='info online'> "+ checkOnline[i].extra +"  </div> </a>" );
+
+                  var image = "<img src='"+ check[i].image +"' alt='logo' class ='imageCSS' ";
+                  $( "#targetImage" ).append( "<div class ='logo online'> " + image + " </div>" );
+
+                }
+              }
+            }
+          } // I made a slide!
+          });
+        });
+      }
+    });
+  });
+});
+
+
+// sorting function for the arrays
+function compare(a,b) {
+    if (a.name < b.name)
+      return -1;
+    if (a.name > b.name)
+      return 1;
+    return 0;
+  }
+
+</script>
+
+
+<html>
+
+  <div class="container well" >
+
+    <div class = "row text-center">
+
+      <div class = "col-xs-12  ">
+        <h1>Twitch Streams</h1>
+      </div>
+
+    </div>
+    <!-- real css is higher up on line 57 -->
+    <div class = "row text-center">
+      <!--  target div for the logo -->
+      <div class = "col-xs-4 nopadding" id="targetImage"></div>
+      <!--  target div for the stream info-->
+      <div class = "col-xs-8 nopadding" id="targetInfo"></div>
+
+
+
+   </div>
+  </div>
+
+</html>

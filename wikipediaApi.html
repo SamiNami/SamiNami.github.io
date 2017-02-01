@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- import jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- import bootstrap -->
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/wStyle.css">
+
+</head>
+
+<script>
+$(document).ready(function() {
+    //random wikipedia page script
+    $("#randomPage").on("click", function(){
+
+    window.open('https://en.wikipedia.org/wiki/Special:Random');
+  });
+
+
+
+  // click on the serach button if you press enter
+  $("#input").keyup(function(event){
+      if(event.keyCode == 13){
+          $("#search").click();
+      }
+  });
+
+
+  $("#search").on("click", function(){
+
+      // get the input value from the form
+      var title = document.getElementById('input').value;
+      //get Json from wikiepdia api
+      $.getJSON("https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" +title+ "&utf8=&format=json&callback=?", function(json){
+        // var to store the relevant data in
+        var test = json.query.search[0].snippet;
+        var html = "";
+        // loop through each element of the json.Object
+        json.query.search.forEach(function(val) {
+          // create an object out of each key/object inside the object
+          var keys = Object.keys(val);
+
+          // loop through the keys
+          keys.forEach(function(key) {
+
+            // since the objects have many keys, we only want to display things for spesific keys
+            // we want the title and snippet keys
+            if(key === "title"){
+            html += "<a href='https://en.wikipedia.org/wiki/"+val[key]+"' > ";
+            html += "<div class = 'titles' > "+val[key]+" <br>";
+            }
+
+            else if(key === "snippet"){
+            html +=  val[key] + "...<br>";
+            html += "</div></a><br>";
+            }
+          });
+
+        });
+
+        $("#target").html(html);
+
+      });
+
+    });
+
+
+});
+
+
+
+</script>
+
+
+<html>
+
+  <div class="container-fluid" >
+    <div class = "row text-center">
+      <div class = "col-xs-12  ">
+        <img src ="http://www.userlogos.org/files/logos/mafi0z/wikipedia3.png" alt ="logo">
+
+      </div>
+
+    </div>
+
+    <div class = "row text-center">
+      <div class = "col-xs-12 " >
+
+        <button id = "randomPage" class = "btn btn-primary" type="button">  Random wikipedia article </button>
+
+
+      </div>
+    </div>
+
+    <div class = "row text-center">
+      <div class = "col-xs-offset-2 col-xs-8 col-xs-offset-2 block text-center">
+
+        <!-- important to add onSubmit="retrun false" to prevent site from reloading" -->
+        <form onSubmit="return false;" class ="form group">
+          <input type="text" class="form-control"  placeholder="Search Wikipedia" id ="input" >
+        </form>
+        <button type="button" id="search" > Search </button>
+      </div>
+
+      <div class = "col-xs-offset-2 col-xs-8 col-xs-offset-2 black-text" id="target">
+
+      </div>
+    </div>
+  </div>
+
+</html>
