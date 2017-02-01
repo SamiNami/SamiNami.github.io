@@ -1,14 +1,32 @@
+/* The css for my this site is not very clean, was playing around a lot.. */
+
+/*
+Main colors
+blue #CAEBF2
+grey #A9A9A9
+Red #FF3B3F
+White #EFEFEF
+*/
+
+html body {
+  /* BG pattern from https://subtlepatterns.com/ */
+  background:url(../images/cheap_diagonal_fabric.png) repeat;
+
+  margin: 0;
+  padding:0;
+}
+
 #navcont {
     padding-top:10px;
     padding-bottom:5px;
-
     height:100%;
 }
-
-#body {
-  /* BG pattern from https://subtlepatterns.com/ */
-  background:url(../images/footer_lodyas.png) repeat;
-
+/* wrap used for navcont*/
+.wrap {
+    width: 100%;
+    background-color: #EFEFEF;
+    border-style: solid;
+    border-bottom: 2px solid #FF3B3F;
 
 }
 
@@ -17,30 +35,48 @@
 
 }
 
+.align{
+  vertical-align: middle;
+}
 
 .thick-gray-border {
     border-color: #dddfd4;
-    border-width: 10px;
+    border-width: 2px;
     border-style: solid;
-    border-radius: 50%;
+    border-radius: 30%;
 }
 
 .lighpattern{
-  background:url(../images/bg.png) repeat;
-}
-
-.greypattern{
   background:url(../images/cheap_diagonal_fabric.png) repeat;
 }
 
 
-.jumbotron{
-  margin-bottom: 0;
-  border-color: #000000;
-  border-width: 1px;
-  border-style: solid;
 
+
+.jumbotron{
+  margin: 0;
+
+  border-top: 30px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+
+  border-color: #FF3B3F;
+  border-style: solid;
+  }
+
+.jumbotron p{
+  display: inline-block;
+  background-color: #CAEBF2;
+  text-align: left;
 }
+
+.footer{
+  margin: 0px;
+  padding: 0px;
+  background:url(../images/cheap_diagonal_fabric.png) repeat;
+}
+
 
 .margin-top{
   margin-top: 20px;
@@ -52,22 +88,15 @@
 .link-image {
     width: 10%;
 }
-
 .face-image {
     width: 10%;
 }
 
 .row{
-  margin-top: 40px;
-  margin-bottom: 40px
+  margin: 40px;
 
 }
-
-
-.wrap {
-    width: 100%;
-    background:url(../images/binding_dark.png) repeat;
-    border-style: solid;
-    border-bottom: 2px solid #C0C0C0;;
-
+.inline-block{
+  width: 32%;
+  padding-bottom: 10px;
 }
