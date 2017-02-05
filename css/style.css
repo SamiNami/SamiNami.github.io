@@ -16,9 +16,10 @@ html body {
   padding:0;
 }
 
+
 #navcont {
-    padding-top:10px;
-    padding-bottom:5px;
+    padding-top:0.5%;
+    padding-bottom:0.5%;
     height:100%;
 }
 /* wrap used for navcont*/
@@ -29,6 +30,13 @@ html body {
     border-bottom: 2px solid #FF3B3F;
 
 }
+
+a:link, a:hover, a:visited, a:active{
+  color: black;
+  text-decoration: none;
+}
+
+
 
 #about{
 /*  background-color: #202020; */
@@ -102,19 +110,48 @@ html body {
 }
 
 
-.placeholder-image{
-  color: #EFEFEF;
-  border: 1px;
-  border-style: solid;
+.image {
+    position:relative;
+    width:100%;
+    height:100%;
+    border-width: 1px;
+    border-color: #EFEFEF;
+    border-style: solid;
 }
-
-.placeholder-image:hover{
-  color: #FF3B3F;
-  opacity: 1;
-
+.image img {
+    width:100%;
+    vertical-align:top;
 }
+.image:after, .image:before {
+    position:absolute;
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.image:after {
+    content:'\A';
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
 
-a:link, a:hover, a:visited, a:active{
-  color: none;
-  text-decoration: none;
+    border-width: 1px;
+    border-color: #EFEFEF;
+    border-style: solid;
+}
+.image:before {
+    content: attr(data-content);
+    width:100%;
+    color:#EFEFEF;
+    z-index:1;
+    bottom:0;
+    padding:4px 10px;
+    text-align:center;
+    background:#FF3B3F;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    border-width: 1px;
+    border-color: #EFEFEF;
+}
+.image:hover:after, .image:hover:before {
+    opacity:1;
 }

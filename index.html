@@ -37,19 +37,6 @@ $(document).ready(function(){
     window.open("twitchAPI.html");
   });
 
-  $("#QM").hover(function(){
-    console.log("Kuppa");}
-    , function(){
-    console.log("Kappa");
-  });
-
-
-
-
-
-
-
-
 
   // for the future
 /*  $("#submit").on("click", function(){
@@ -63,16 +50,13 @@ $(document).ready(function(){
 */
 
 });
-
-
-
 </script>
 
 
 <body >
   <nav class="navbar navbar-fixed-top wrap">
  <div class="container" id="navcont">
-  <a class="navbar-brand" href="#"></a>
+
   <ul class="nav navbar-nav">
     <li class="nav-item active">
       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -122,27 +106,33 @@ $(document).ready(function(){
         <div class="row text-center">
           <div class="col-md-6">
 
-
-
-            <img class="placeholder-image" src="images/qm.png" alt="placeholder " href="quotemachine.html"  target='_blank' id = "QM">
-
+            <div data-content="Random Quotes" class="image" id ="WM" alt="placeholder" id = "QM">
+              <img src="images/qm.png">
+            </div>
 
           </div>
           <div class="col-md-6">
 
-            <img class="placeholder-image" src="images/wm.png" alt="placeholder" id ="WM">
+            <div data-content="Weather Machine" class="image" id ="WM" alt="placeholder">
+              <img src="images/wm.png">
+            </div>
 
           </div>
         </div>
         <div class="row text-center">
           <div class="col-md-6">
 
-            <img class="placeholder-image" src="images/wiki.png" alt="placeholder" id ="WA">
+            <div data-content="Wikiepedia Search" class="image" id ="WA" alt="placeholder">
+              <img src="images/wiki.png" >
+            </div>
 
           </div>
+
           <div class="col-md-6">
 
-            <img class="placeholder-image" src="images/twitch.png" alt="placeholder" id = "TA">
+            <div data-content="Twitch Streams" class="image" id ="TA" alt="placeholder">
+              <img src="images/twitch.png">
+            </div>
 
           </div>
         </div>
