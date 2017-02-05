@@ -19,6 +19,38 @@
 // add javacsript to click on image
 
 $(document).ready(function(){
+
+  // Opening links
+  $("#QM").on("click", function(){
+    window.open("quotemachine.html");
+  });
+
+  $("#WM").on("click", function(){
+    window.open("showWeather.html");
+  });
+
+  $("#WA").on("click", function(){
+    window.open("wikipediaApi.html");
+  });
+
+  $("#TA").on("click", function(){
+    window.open("twitchAPI.html");
+  });
+
+  $("#QM").hover(function(){
+    console.log("Kuppa");}
+    , function(){
+    console.log("Kappa");
+  });
+
+
+
+
+
+
+
+
+
   // for the future
 /*  $("#submit").on("click", function(){
     var name = document.getElementById('name').value;
@@ -91,29 +123,26 @@ $(document).ready(function(){
           <div class="col-md-6">
 
 
-            <a href="quotemachine.html" target='_blank'>
-            <img class="placeholder-image" src="images/qm.png" alt="placeholder " href="quotemachine.html"  target='_blank'><a>
+
+            <img class="placeholder-image" src="images/qm.png" alt="placeholder " href="quotemachine.html"  target='_blank' id = "QM">
 
 
           </div>
           <div class="col-md-6">
 
-            <a href="showWeather.html" target='_blank'>
-            <img class="placeholder-image" src="images/wm.png" alt="placeholder"><a>
+            <img class="placeholder-image" src="images/wm.png" alt="placeholder" id ="WM">
 
           </div>
         </div>
         <div class="row text-center">
           <div class="col-md-6">
 
-            <a href="wikipediaApi.html" target='_blank'>
-            <img class="placeholder-image" src="images/wiki.png" alt="placeholder"><a>
+            <img class="placeholder-image" src="images/wiki.png" alt="placeholder" id ="WA">
 
           </div>
           <div class="col-md-6">
 
-            <a href="twitchAPI.html" target='_blank'>
-            <img class="placeholder-image" src="images/twitch.png" alt="placeholder"><a>
+            <img class="placeholder-image" src="images/twitch.png" alt="placeholder" id = "TA">
 
           </div>
         </div>
@@ -148,18 +177,18 @@ $(document).ready(function(){
             </form>
           </div>
           <div class="col-md-6">
-            <p>Use the form on the left to send me e-mail. You can also contact me on social media using the buttons below.</p>
+            <p>Use the form on the left to e-mail me. You can also contact me on social media using the buttons below.</p>
 
             <a href="https://twitter.com/samiperalahti" target='_blank'>
             <img class="link-image inline-block" src="images/twitter.png" alt="link"></a>
 
-            <a href="https://linkedin.com/in/sami-perälahti-b8b819135" target='_blank'>
+            <a href="https://linkedin.com/in/sami-peralahti" target='_blank'>
             <img class="link-image inline-block" src="images/in.png" alt="link"></a>
 
             <a href="https://github.com/saminami" target='_blank'>
             <img class="link-image inline-block" src="images/gh.png" alt="link"></a>
 
-            <p>You can use <b>sami.peralahti@gmail.com</b> in case you want to use your own e-mail client.</p>
+            <p>Use <b>sami.peralahti@gmail.com</b> if you want to use your own e-mail client.</p>
 
 
           </div>

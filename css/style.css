@@ -103,10 +103,11 @@ html body {
 
 
 .placeholder-image{
-  border-color: #FF3B3F;
+  color: #EFEFEF;
   border: 1px;
   border-style: solid;
 }
+
 .placeholder-image:hover{
   color: #FF3B3F;
   opacity: 1;
