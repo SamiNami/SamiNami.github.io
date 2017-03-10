@@ -18,7 +18,8 @@ $(function setClick() {
     }
     else{
       $('.panel-text').css("opacity","0.3");
-      // add clear();
+      clear();
+      $(".panel-text").text("- -");
     }
   });
 });
@@ -177,8 +178,6 @@ function showFail(){
   setTimeout(function () {
     displaySequenceLenght();
   }, 2900);
-
-
 
 }
 
