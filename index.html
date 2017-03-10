@@ -16,11 +16,11 @@
 
 <script>
 
-// add javacsript to click on image
+
 
 $(document).ready(function(){
 
-  // Opening links
+
   $("#QM").on("click", function(){
     window.open("quotemachine.html");
   });
@@ -37,17 +37,25 @@ $(document).ready(function(){
     window.open("twitchAPI.html");
   });
 
+  //
 
-  // for the future
-/*  $("#submit").on("click", function(){
-    var name = document.getElementById('name').value;
-    var mail = document.getElementById('mail').value;
-    var message = document.getElementById('message').value;
-
-    console.log(name,mail,message);
-
+  $("#simon").on("click", function(){
+    window.open("simon.html");
   });
-*/
+
+  $("#calc").on("click", function(){
+    window.open("calculator.html");
+  });
+
+  $("#pomodoro").on("click", function(){
+    window.open("pomodoro.html");
+  });
+
+  $("#tictac").on("click", function(){
+    window.open("tictac.html");
+  });
+
+
 
 });
 </script>
@@ -101,28 +109,36 @@ $(document).ready(function(){
       <div class="row text-center">
          <div class="col-md-12">
             <h1> Portfolio </h1>
-          </div>
         </div>
+      </div>
+
+      <div class="row text-center">
+         <div class="col-md-12">
+           <h2> API Projects </h2>
+        </div>
+      </div>
+        <!-- First Row -->
         <div class="row text-center">
           <div class="col-md-6">
 
-            <div data-content="Random Quotes" class="image" id ="QM" alt="placeholder" id = "QM">
+            <div data-content="Random Quotes" class="image" id ="QM" alt="Random Quotes" id = "QM">
               <img src="images/qm.png">
             </div>
 
           </div>
           <div class="col-md-6">
 
-            <div data-content="Twitch Streams" class="image" id ="TA" alt="placeholder">
+            <div data-content="Twitch Streams" class="image" id ="TA" alt="Twitch">
               <img src="images/twitch.png">
             </div>
 
           </div>
         </div>
+        <!-- Second Row-->
         <div class="row text-center">
           <div class="col-md-6">
 
-            <div data-content="Wikipedia Search" class="image" id ="WA" alt="placeholder">
+            <div data-content="Wikipedia Search" class="image" id ="WA" alt="Wikipedia">
               <img src="images/wiki.png" >
             </div>
 
@@ -130,12 +146,57 @@ $(document).ready(function(){
 
           <div class="col-md-6">
 
-            <div data-content="Weather Machine / API not compatible with Google Chrome" class="image" id ="WM" alt="placeholder">
+            <div data-content="Weather Machine / API not compatible with Google Chrome" class="image" id ="WM" alt="Weather Machine">
                 <img src="images/wm.png">
             </div>
 
           </div>
         </div>
+
+        <div class="row text-center">
+           <div class="col-md-12">
+             <h2> Playing with Javascript </h2>
+          </div>
+        </div>
+
+        <!-- Third Row -->
+        <div class="row text-center">
+          <div class="col-md-6">
+
+            <div data-content="Simon Game" class="image" id ="simon" alt="Simon Game">
+              <img src="images/simon.png" >
+            </div>
+
+          </div>
+
+          <div class="col-md-6">
+
+            <div data-content="Calculator" class="image" id ="calc" alt="Calculator">
+                <img src="images/calc.png">
+            </div>
+
+          </div>
+        </div>
+        <!-- Fourth Row -->
+        <div class="row text-center">
+          <div class="col-md-6">
+
+            <div data-content="Pomodoro Clock" class="image" id ="pomodoro" alt="Pomodoro Clock">
+                <img src="images/pomodoro.png">
+            </div>
+
+          </div>
+
+          <div class="col-md-6">
+
+            <div data-content="Tic-Tac-Toe Game" class="image" id ="tictac" alt="TicTacToe">
+              <img src="images/tictac.png" >
+            </div>
+
+          </div>
+        </div>
+
+
       </div>
     </div>
 </section>
