@@ -1,0 +1,30 @@
+
+body{
+    font-size: 20px;
+}
+
+.container{
+  min-width: 300px;
+  max-width: 50%;
+  margin-top:20px;
+  padding-bottom:10px;
+}
+
+.progress{
+   margin-top: 5px;
+   border: 1px;
+   border-style: solid;
+   color:white;
+}
+
+.panel-default{
+  height: 120px;
+  border: 1px;
+  border-style: solid;
+  color:white;
+}
+
+.hand{
+  cursor: pointer;
+   cursor: hand;
+}
