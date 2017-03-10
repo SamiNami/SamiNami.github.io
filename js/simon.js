@@ -20,6 +20,8 @@ $(function setClick() {
       $('.panel-text').css("opacity","0.3");
       clear();
       $(".panel-text").text("- -");
+      strickt = false;
+      $('.strickt').css("opacity","0.5");
     }
   });
 });
