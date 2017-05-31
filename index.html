@@ -20,6 +20,14 @@
 
 $(document).ready(function(){
 
+  $("#todolist").on("click", function(){
+    window.open("todolist.html");
+  });
+
+  $("#seed").on("click", function(){
+    window.open("seed.html");
+  });
+
 
   $("#QM").on("click", function(){
     window.open("quotemachine.html");
@@ -114,6 +122,32 @@ $(document).ready(function(){
 
       <div class="row text-center">
          <div class="col-md-12">
+           <h2> OOP and Styling </h2>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-md-6">
+
+          <div data-content="Todo list - built with OOP" class="image" id ="todolist" alt="Todo List">
+            <img src="images/todolist.png">
+          </div>
+
+        </div>
+        <div class="col-md-6">
+
+          <div data-content="Css styling project - no scripting" class="image" id ="seed" alt="css-styling">
+            <img src="images/seed.png">
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="row text-center">
+         <div class="col-md-12">
            <h2> API Projects </h2>
         </div>
       </div>
@@ -121,7 +155,7 @@ $(document).ready(function(){
         <div class="row text-center">
           <div class="col-md-6">
 
-            <div data-content="Random Quotes" class="image" id ="QM" alt="Random Quotes" id = "QM">
+            <div data-content="Random Quotes" class="image" id ="QM" alt="Random Quotes">
               <img src="images/qm.png">
             </div>
 

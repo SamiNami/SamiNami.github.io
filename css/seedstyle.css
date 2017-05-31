@@ -1,0 +1,122 @@
+
+/* Hides extra overflow / margin / padding */
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    /* Overriding bootstrap default values*/
+    font-family: "Arial", Helvetica, sans-serif !important;
+}
+
+a{
+  color: #ffffff;
+  text-decoration: underline;
+
+}
+
+body{
+    background-color:  #4d4f53;
+}
+
+/* Overriding bootstrap default values*/
+
+h1{
+  font-size: 53px !important;
+  font-style: bold !important;
+  color: #4d4f53 !important;
+}
+
+/* Overriding bootstrap default values*/
+
+p{
+  font-size: 16px !important;
+  color: #4d4f53;
+}
+
+span{
+  color: #ffffff;
+}
+
+/* Added padding, makes the site a bit more spacious*/
+
+.row{
+  padding-top: 5px;
+}
+
+.extrapadding{
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.jumbotron{
+  margin:0;
+  padding-top:0;
+  padding-bottom: 0;
+  background-color: #ffffff;
+}
+
+.bgimage{
+  background:#ffffff url(images/bg.gif) no-repeat center center;
+}
+
+.fullWidth{
+  width: 100%;
+}
+
+.noPadding{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.check{
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+.footer{
+  background-color:  #4d4f53;
+  padding-bottom: 1%;
+  padding-top: 1%;
+}
+
+.form-control{
+  border-color:  #4d4f53;
+  border-radius: 0;
+}
+
+.btn-primary{
+  background-color: #ffffff;
+  border-color:  #4d4f53;
+  border-radius: 0;
+  color: #4d4f53;
+  width: 100%
+}
+
+.inline-block{
+  padding-left: 6px;
+}
+
+.float-left{
+  float: left;
+}
+
+.small-text {
+    font-size: 80%
+}
+
+/* Classes that are used on smal screens */
+@media (max-width: 768px) {
+    .text-justify-sm {
+        text-align: left;
+    }
+    .float-left-sm{
+      float: left;
+    }
+    .float-right-sm{
+      float: right;
+    }
+}
